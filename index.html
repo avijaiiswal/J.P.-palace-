@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.P Palace — Gonda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="brand"><b>J.P</b> Palace</div>
+  <div class="navlinks">
+    <a href="#gallery">Gallery</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#dining">Room Service</a>
+    <a href="#location">Location</a>
+  </div>
+  <button class="book-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Now</button>
+</nav>
+
+<header class="hero">
+  <div class="jaali-frame"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Awas Vikas Colony · Gonda</div>
+    <h1>J.P <em>Palace</em></h1>
+    <p class="sub">A quiet, well-kept stay a kilometre from Gonda Junction — on the Faizabad road, close to Ayodhya, built for travellers who want comfort without fuss.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="#booking">Check Availability &amp; Book</a>
+      <a class="btn btn-outline" href="#rooms">View Rooms</a>
+    </div>
+    <div class="hero-rating"><b>3.7 ★</b> <span>from 2,099 guest reviews on Google</span></div>
+  </div>
+</header>
+
+<section id="gallery">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div class="eyebrow">Gallery</div>
+      <h2>A first look at the property</h2>
+      <p>The lobby, the rooms, and the building itself — as they actually are.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gphoto g1"><img src="photos/lobby-fountain.jpg" alt="J.P Palace lobby with fountain and staircase"><div class="cap">Lobby</div></div>
+      <div class="gphoto g2"><img src="photos/premium-suite-1.jpg" alt="Premium Suite AC room bed"><div class="cap">Premium Suite</div></div>
+      <div class="gphoto g3"><img src="photos/bathroom-luxury.jpg" alt="Bathroom with gold fixtures"><div class="cap">Bathroom</div></div>
+      <div class="gphoto g4"><img src="photos/classic-room.jpg" alt="Classic AC room"><div class="cap">Classic Room</div></div>
+      <div class="gphoto g5"><img src="photos/balcony-terrace.jpg" alt="Terrace seating"><div class="cap">Terrace</div></div>
+      <div class="gphoto g6"><img src="photos/standard-room-2.jpg" alt="Standard AC room"><div class="cap">Standard Room</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about reveal">
+    <div class="about-copy">
+      <div class="eyebrow">The Hotel</div>
+      <h2 style="margin-top:10px;">Central, comfortable, and close to everything Gonda</h2>
+      <p>J.P Palace sits on the Faizabad road in front of the LIC office in Awas Vikas Colony — an easy walk from the railway station and bus stand. The hotel has welcomed travellers, wedding guests, and business visitors for years, with 18 well-kept rooms across three floors.</p>
+      <p>Every room comes with a flat-screen TV, wardrobe, hot &amp; cold water, and round-the-clock room service. Downstairs, Zefran Restaurant serves multi-cuisine meals in a calm, music-lit dining room.</p>
+    </div>
+    <div>
+      <div class="about-photo"><img src="photos/premium-suite-2.jpg" alt="Premium Suite interior"></div>
+      <div class="facts">
+        <div><div class="num">18</div><div class="lbl">Rooms · 3 floors</div></div>
+        <div><div class="num">1 km</div><div class="lbl">From Railway Station</div></div>
+        <div><div class="num">24 hr</div><div class="lbl">Front Desk &amp; Room Service</div></div>
+        <div><div class="num">2,099</div><div class="lbl">Google Reviews</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-band" id="booking">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div class="eyebrow">Reserve Directly</div>
+      <h2>Book your room — no commission, no middleman</h2>
+      <p>Fill this in and your room is reserved instantly. Pay at the hotel on arrival.</p>
+    </div>
+    <div class="book-card">
+      <div class="book-grid">
+        <div class="field">
+          <label for="f-name">Full name</label>
+          <input id="f-name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number</label>
+          <input id="f-phone" type="tel" placeholder="10-digit mobile" required>
+        </div>
+        <div class="field">
+          <label for="f-checkin">Check-in</label>
+          <input id="f-checkin" type="date" required>
+        </div>
+        <div class="field">
+          <label for="f-checkout">Check-out</label>
+          <input id="f-checkout" type="date" required>
+        </div>
+        <div class="field">
+          <label for="f-guests">Guests</label>
+          <select id="f-guests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select>
+        </div>
+        <div class="field">
+          <label for="f-room">Room type</label>
+          <select id="f-room">
+            <option value="1400">Standard AC Room — ₹1,400/night</option>
+            <option value="2100">Classic AC Room — ₹2,100/night</option>
+            <option value="2900">Premium Suite — ₹2,900/night</option>
+          </select>
+        </div>
+      </div>
+      <div class="room-price-row">
+        <div class="price-est"><small>Estimated total</small><span id="price-out">₹1,400</span></div>
+        <button class="btn btn-gold" onclick="submitBooking()">Reserve This Room</button>
+      </div>
+      <div class="book-msg" id="book-msg"></div>
+      <div class="my-bookings" id="my-bookings-wrap" style="display:none;">
+        <strong>Your reservations</strong>
+        <ul id="my-bookings-list"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div class="eyebrow">Stay</div>
+      <h2>Rooms built for rest</h2>
+      <p>Simple, clean interiors with everything a traveller needs — nothing you don't.</p>
+    </div>
+    <div class="room-grid">
+      <div class="room-card">
+        <div class="thumb"><img src="photos/standard-room-1.jpg" alt="Standard AC Room"></div>
+        <div class="tag">01</div>
+        <h3>Standard AC Room</h3>
+        <div class="price">₹1,400 <small style="font-size:0.7rem; color:#6b6152;">/ night</small></div>
+        <ul>
+          <li>King bed · 1510 sq.ft</li>
+          <li>Air conditioning</li>
+          <li>Flat-screen TV</li>
+          <li>Hot &amp; cold water</li>
+        </ul>
+        <button class="btn btn-outline" style="color:var(--ink); border-color:var(--ink);" onclick="selectRoom(1400)">Select &amp; Book</button>
+      </div>
+      <div class="room-card">
+        <div class="thumb"><img src="photos/classic-room.jpg" alt="Classic AC Room"></div>
+        <div class="tag">02</div>
+        <h3>Classic AC Room</h3>
+        <div class="price">₹2,100 <small style="font-size:0.7rem; color:#6b6152;">/ night</small></div>
+        <ul>
+          <li>Double bed · 225 sq.ft</li>
+          <li>Free high-speed Wi-Fi</li>
+          <li>Premium linen</li>
+          <li>Work desk &amp; seating</li>
+        </ul>
+        <button class="btn btn-outline" style="color:var(--ink); border-color:var(--ink);" onclick="selectRoom(2100)">Select &amp; Book</button>
+      </div>
+      <div class="room-card">
+        <div class="thumb"><img src="photos/premium-suite-1.jpg" alt="Premium Suite AC Room"></div>
+        <div class="tag">03</div>
+        <h3>Premium Suite</h3>
+        <div class="price">₹2,900 <small style="font-size:0.7rem; color:#6b6152;">/ night</small></div>
+        <ul>
+          <li>King bed · 225 sq.ft</li>
+          <li>Wall-mounted TV &amp; lounge seating</li>
+          <li>Marble bathroom, rain shower</li>
+          <li>Ideal for longer stays</li>
+        </ul>
+        <button class="btn btn-outline" style="color:var(--ink); border-color:var(--ink);" onclick="selectRoom(2900)">Select &amp; Book</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div class="eyebrow">On the Property</div>
+      <h2>Everything a stay needs</h2>
+    </div>
+    <div class="amen-grid">
+      <div class="amen-item"><div class="ic">✓</div><h4>Free Wi-Fi</h4><p>Throughout the property, including the business centre.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Parking</h4><p>On-site parking for guests and event visitors.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Banquet Hall</h4><p>Space for weddings, receptions and functions.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Laundry Service</h4><p>Same-day laundry available on request.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Travel Desk</h4><p>Help with local travel and onward journeys.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Security</h4><p>Round-the-clock property security.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Luggage Storage</h4><p>Store bags before check-in or after check-out.</p></div>
+      <div class="amen-item"><div class="ic">✓</div><h4>Medical Assistance</h4><p>On-call support if a guest needs it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="roomservice" id="dining">
+  <div class="wrap reveal">
+    <div>
+      <div class="eyebrow">In-Room Dining</div>
+      <h2>Order lunch &amp; room service on WhatsApp</h2>
+      <p>Once you're checked in, message our WhatsApp for food orders and housekeeping requests — no need to call the front desk.</p>
+    </div>
+    <div class="menu-card">
+      <div class="thumb"><img src="photos/balcony-terrace.jpg" alt="Terrace dining area"></div>
+      <div class="inner">
+        <div class="item"><span>Thali (Veg)</span><span>₹180</span></div>
+        <div class="item"><span>Butter Chicken + Rice</span><span>₹260</span></div>
+        <div class="item"><span>Paneer Tikka</span><span>₹190</span></div>
+        <div class="item"><span>Tea / Coffee</span><span>₹40</span></div>
+        <div class="item"><span>Extra Towels / Bedding</span><span>Free</span></div>
+        <a class="btn btn-gold" href="https://wa.me/919104488578?text=Namaste%2C%20I%27m%20a%20guest%20at%20J.P%20Palace%2C%20Room%20___.%20I%27d%20like%20to%20order%3A" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div class="eyebrow">Guests Say</div>
+      <h2>What people remember</h2>
+    </div>
+    <div class="review-row">
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>Guests often highlight the calm dining room at Zefran, with soft music and a wide multi-cuisine spread that stands out from other hotels nearby.</p>
+        <div class="who">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>Visitors regularly mention the hotel's central location, a short walk from the railway station, as a reason they'd choose it again.</p>
+        <div class="who">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★☆☆</div>
+        <p>Some reviewers note that banquet events can get busy, so booking rooms and function space ahead of peak wedding season is recommended.</p>
+        <div class="who">Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="wrap reveal">
+    <div>
+      <div class="eyebrow">Find Us</div>
+      <h2>Awas Vikas Colony, Gonda</h2>
+      <ul class="loc-list">
+        <li><b>Address</b> <span>01, Faizabad Road, Awas Vikas Colony, Gonda 271003</span></li>
+        <li><b>Railway Station</b> <span>1 km · Gonda Junction</span></li>
+        <li><b>Phone</b> <span>+91 91044 88578</span></li>
+        <li><b>Check-in / out</b> <span>12:00 PM – 12:00 PM</span></li>
+      </ul>
+    </div>
+    <div class="map-card">
+      <div class="pin">📍</div>
+      <p>Faizabad Road, Awas Vikas Colony, Gonda — 1 km from Gonda Junction, in front of the LIC office.</p>
+      <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=J.P+Palace+Gonda+Uttar+Pradesh" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">J.P Palace</div>
+    <div>01, Faizabad Road, Awas Vikas Colony, Gonda, Uttar Pradesh 271003</div>
+    <div>+91 91044 88578</div>
+  </div>
+  <div class="fine">© 2026 J.P Palace, Gonda. Rates shown are estimates — confirm final tariff with the front desk.</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919104488578?text=Namaste%2C%20I%27m%20a%20guest%20at%20J.P%20Palace.%20I%27d%20like%20to%20order%20room%20service." target="_blank" rel="noopener" aria-label="Room service on WhatsApp">
+  <span class="lbl">Room Service</span>☎
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
